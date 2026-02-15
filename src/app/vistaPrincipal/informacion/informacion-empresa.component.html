@@ -67,11 +67,11 @@
   
       <div class="row text-center">
         <div class="col-md-4 mb-4" *ngFor="let m of [
-          {name:'Juan David Vela', role:'Líder', photo:'assets/img/foto1.png'},
-          {name:'Manuela Meneses Erazo', role:'Secretaria', photo:'assets/img/foto2.png'},
-          {name:'Karold Dirley Delgado', role:'Moderador', photo:'assets/img/foto2.png'},
-          {name:'Everson Leandro Restrepo', role:'Interventor del Proyecto', photo:'assets/img/foto1.png'},
-          {name:'Duván Felipe Armero', role:'Webmaster', photo:'assets/img/foto1.png'}
+          {name:'Juan David Vela',email:'juanvela@unicauca.edu.co', role:'Líder', photo:'assets/img/foto1.png'},
+          {name:'Manuela Meneses Erazo',email:'manmeneses@unicauca.edu.co', role:'Secretaria', photo:'assets/img/foto2.png'},
+          {name:'Karold Dirley Delgado', email:'karolddelgado@unicauca.edu.co',role:'Moderador', photo:'assets/img/foto2.png'},
+          {name:'Everson Leandro Restrepo',email:'eversonrestrepo@unicauca.edu.co', role:'Interventor del Proyecto', photo:'assets/img/foto1.png'},
+          {name:'Duván Felipe Armero',email:'duvanfeli@unicauca.edu.co',role:'Webmaster', photo:'assets/img/foto1.png'}
         ]">
           <div class="team-card">
             <img 
@@ -80,6 +80,7 @@
             class="team-img"
             />
             <h5>{{m.name}}</h5>
+            <p><i class="bi bi-envelope-fill me-2"></i>{{m.email}}</p>
             <span>{{m.role}}</span>
           </div>
         </div>

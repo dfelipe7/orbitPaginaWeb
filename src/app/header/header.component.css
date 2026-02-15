@@ -7,10 +7,54 @@
   }
   
   /* Logo */
+  .navbar-brand {
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.02);
+  }
+  
+  .navbar-logo {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+    display: block;
+    border: 2px solid rgba(13, 202, 240, 0.3);
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+  }
+  
+  .navbar-brand:hover .navbar-logo {
+    filter: drop-shadow(0 0 12px rgba(13, 202, 240, 0.6));
+    transform: scale(1.05);
+  }
+  
   .orbit-title {
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0.5px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .navbar-brand:hover .orbit-title {
+    color: #0dcaf0;
+  }
+  
+  /* Ajuste para cuando solo hay logo sin texto */
+  .navbar-brand:has(img:only-child) {
+    padding: 0.25rem 0;
   }
   
   .orbit-icon {
