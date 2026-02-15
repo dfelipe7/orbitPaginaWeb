@@ -1,0 +1,90 @@
+<div class="container py-5 informacion">
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="mb-5 text-center">
+      <h2 class="section-title">Quiénes somos</h2>
+      <p class="section-text">
+        <strong>Orbit</strong> es un grupo dedicado al desarrollo de software,
+        enfocado en la creación de soluciones tecnológicas modernas, estructuradas
+        y confiables. Trabajamos integrando innovación, buenas prácticas y trabajo
+        colaborativo para responder a las necesidades reales de personas y
+        organizaciones.
+      </p>
+    </section>
+  
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="row mb-5">
+      <div class="col-md-6 mb-4">
+        <div class="info-card">
+          <i class="bi bi-bullseye icon"></i>
+          <h3>Misión</h3>
+          <p>
+            Diseñar y desarrollar soluciones de software que aporten valor a
+            personas y organizaciones, integrando tecnologías actuales y enfoques
+            innovadores, priorizando la funcionalidad y la experiencia del usuario.
+          </p>
+        </div>
+      </div>
+  
+      <div class="col-md-6 mb-4">
+        <div class="info-card">
+          <i class="bi bi-eye icon"></i>
+          <h3>Visión</h3>
+          <p>
+            Posicionarnos como una empresa referente en el desarrollo de software,
+            ofreciendo propuestas innovadoras que contribuyan a la evolución de los
+            entornos digitales y al uso eficiente de la tecnología.
+          </p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- VALORES -->
+    <section class="mb-5">
+      <h2 class="section-title text-center mb-4">Nuestros valores</h2>
+  
+      <div class="row text-center">
+        <div class="col-md-4 mb-4" *ngFor="let v of [
+          {icon:'bi-award', title:'Compromiso', text:'Asumimos cada proyecto con dedicación y responsabilidad.'},
+          {icon:'bi-lightbulb', title:'Innovación', text:'Buscamos soluciones tecnológicas modernas y creativas.'},
+          {icon:'bi-check-circle', title:'Calidad', text:'Desarrollamos software robusto y confiable.'},
+          {icon:'bi-people', title:'Trabajo en equipo', text:'Creemos en la colaboración y el respeto mutuo.'},
+          {icon:'bi-shield-lock', title:'Ética', text:'Creamos tecnología con responsabilidad y seguridad.'},
+          {icon:'bi-clock', title:'Puntualidad', text:'Valoramos el cumplimiento y la disciplina.'}
+        ]">
+          <div class="valor-card">
+            <i class="bi {{v.icon}} valor-icon"></i>
+            <h5>{{v.title}}</h5>
+            <p>{{v.text}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- EQUIPO -->
+    <section>
+      <h2 class="section-title text-center mb-4">Nuestro equipo</h2>
+  
+      <div class="row text-center">
+        <div class="col-md-4 mb-4" *ngFor="let m of [
+          {name:'Juan David Vela', role:'Líder', photo:'assets/img/foto1.png'},
+          {name:'Manuela Meneses Erazo', role:'Secretaria', photo:'assets/img/foto2.png'},
+          {name:'Karold Dirley Delgado', role:'Moderador', photo:'assets/img/foto2.png'},
+          {name:'Everson Leandro Restrepo', role:'Interventor del Proyecto', photo:'assets/img/foto1.png'},
+          {name:'Duván Felipe Armero', role:'Webmaster', photo:'assets/img/foto1.png'}
+        ]">
+          <div class="team-card">
+            <img 
+            [src]="m.photo"
+            [alt]="m.name"
+            class="team-img"
+            />
+            <h5>{{m.name}}</h5>
+            <span>{{m.role}}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </div>
+  

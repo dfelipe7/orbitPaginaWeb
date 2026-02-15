@@ -1,0 +1,6 @@
+.contenido {
+  padding-top: 80px; /* Espacio para el header fijo */
+  min-height: calc(100vh - 80px); /* Altura mínima menos el header */
+}
+
+

@@ -1,0 +1,248 @@
+.footer {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0dcaf0, #0d6efd, #0dcaf0);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.footer-section {
+  height: 100%;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #0dcaf0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-title i {
+  font-size: 1.3rem;
+  color: #0dcaf0;
+}
+
+.footer-subtitle {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  margin-top: 1rem;
+}
+
+.orbit-logo {
+  font-size: 3rem;
+  color: #0dcaf0;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.orbit-logo:hover {
+  opacity: 0.6;
+  transform: rotate(360deg);
+}
+
+/* Lista de contacto */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-link:hover {
+  color: #0dcaf0;
+  transform: translateX(5px);
+}
+
+.footer-link i {
+  font-size: 1.1rem;
+  width: 20px;
+  color: #0dcaf0;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Enlaces rápidos */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links-list li {
+  margin: 0;
+}
+
+.footer-link-small {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-link-small::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0dcaf0;
+  transition: width 0.3s ease;
+}
+
+.footer-link-small:hover {
+  color: #0dcaf0;
+}
+
+.footer-link-small:hover::after {
+  width: 100%;
+}
+
+/* Iconos sociales */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(13, 202, 240, 0.1);
+  border: 2px solid rgba(13, 202, 240, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #0dcaf0;
+  background: rgba(13, 202, 240, 0.2);
+  border-color: #0dcaf0;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4);
+}
+
+/* Divisor */
+.footer-divider {
+  border-color: rgba(13, 202, 240, 0.3);
+  margin: 2rem 0 1.5rem;
+  opacity: 0.5;
+}
+
+/* Copyright */
+.copyright-text {
+  color: #999999;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-text i {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-links-list {
+    justify-content: center;
+  }
+
+  .copyright-text {
+    font-size: 0.8rem;
+  }
+
+  .orbit-logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding-top: 3rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+  }
+}

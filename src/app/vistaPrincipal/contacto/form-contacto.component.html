@@ -1,0 +1,136 @@
+<div class="contact-container">
+  <div class="container py-5">
+    
+    <!-- Título de la sección -->
+    <div class="text-center mb-5">
+      <h1 class="contact-title">
+        <i class="bi bi-envelope-paper-heart"></i>
+        Contáctanos
+      </h1>
+      <p class="contact-subtitle">
+        Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
+      </p>
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div class="row justify-content-center mb-4" *ngIf="messageSent">
+      <div class="col-lg-8 col-md-10">
+        <div class="alert alert-success success-message" role="alert">
+          <div class="success-content">
+            <i class="bi bi-check-circle-fill"></i>
+            <div>
+              <h5>¡Mensaje enviado exitosamente!</h5>
+              <p>Gracias por contactarnos. Te responderemos pronto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="contact-card">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            
+            <!-- Campo Nombre -->
+            <div class="form-group mb-4">
+              <label for="nombre" class="form-label">
+                <i class="bi bi-person-fill"></i> Nombre completo
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                formControlName="nombre"
+                class="form-control"
+                [class.is-invalid]="submitted && f['nombre'].errors"
+                [class.is-valid]="submitted && !f['nombre'].errors && f['nombre'].value"
+                placeholder="Ingresa tu nombre completo"
+              />
+              <div class="invalid-feedback" *ngIf="submitted && f['nombre'].errors">
+                <span *ngIf="f['nombre'].errors?.['required']">El nombre es requerido</span>
+                <span *ngIf="f['nombre'].errors?.['minlength']">El nombre debe tener al menos 2 caracteres</span>
+              </div>
+            </div>
+
+            <!-- Campo Correo -->
+            <div class="form-group mb-4">
+              <label for="correo" class="form-label">
+                <i class="bi bi-envelope-fill"></i> Correo electrónico
+              </label>
+              <input
+                type="email"
+                id="correo"
+                formControlName="correo"
+                class="form-control"
+                [class.is-invalid]="submitted && f['correo'].errors"
+                [class.is-valid]="submitted && !f['correo'].errors && f['correo'].value"
+                placeholder="tu.correo@ejemplo.com"
+              />
+              <div class="invalid-feedback" *ngIf="submitted && f['correo'].errors">
+                <span *ngIf="f['correo'].errors?.['required']">El correo es requerido</span>
+                <span *ngIf="f['correo'].errors?.['email']">Ingresa un correo electrónico válido</span>
+              </div>
+            </div>
+
+            <!-- Campo Mensaje -->
+            <div class="form-group mb-4">
+              <label for="mensaje" class="form-label">
+                <i class="bi bi-chat-left-text-fill"></i> Mensaje
+              </label>
+              <textarea
+                id="mensaje"
+                formControlName="mensaje"
+                class="form-control"
+                rows="6"
+                [class.is-invalid]="submitted && f['mensaje'].errors"
+                [class.is-valid]="submitted && !f['mensaje'].errors && f['mensaje'].value"
+                placeholder="Escribe tu mensaje aquí..."
+              ></textarea>
+              <div class="invalid-feedback" *ngIf="submitted && f['mensaje'].errors">
+                <span *ngIf="f['mensaje'].errors?.['required']">El mensaje es requerido</span>
+                <span *ngIf="f['mensaje'].errors?.['minlength']">El mensaje debe tener al menos 10 caracteres</span>
+              </div>
+            </div>
+
+            <!-- Botón Enviar -->
+            <div class="text-center">
+              <button type="submit" class="btn-submit" [disabled]="messageSent">
+                <i class="bi bi-send-fill"></i>
+                <span *ngIf="!messageSent">Enviar Mensaje</span>
+                <span *ngIf="messageSent">Enviando...</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="row mt-5">
+      <div class="col-md-4 text-center mb-4">
+        <div class="info-box">
+          <i class="bi bi-geo-alt-fill"></i>
+          <h5>Ubicación</h5>
+          <p>Popayán, Colombia</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="info-box">
+          <i class="bi bi-clock-fill"></i>
+          <h5>Horario</h5>
+          <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="info-box">
+          <i class="bi bi-telephone-fill"></i>
+          <h5>Respuesta</h5>
+          <p>En menos de 24 horas</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

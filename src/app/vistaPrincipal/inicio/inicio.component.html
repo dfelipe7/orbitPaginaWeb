@@ -1,0 +1,134 @@
+<!-- Carrusel Bootstrap Moderno -->
+<section class="hero-carousel-section">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button 
+        type="button" 
+        data-bs-target="#heroCarousel" 
+        data-bs-slide-to="0" 
+        class="active" 
+        aria-current="true" 
+        aria-label="Slide 1">
+      </button>
+      <button 
+        type="button" 
+        data-bs-target="#heroCarousel" 
+        data-bs-slide-to="1" 
+        aria-label="Slide 2">
+      </button>
+      <button 
+        type="button" 
+        data-bs-target="#heroCarousel" 
+        data-bs-slide-to="2" 
+        aria-label="Slide 3">
+      </button>
+    </div>
+
+    <!-- Slides del carrusel -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-image" style="background-image: url('assets/img/carrusel1.jpg');"></div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+          <div class="carousel-content-wrapper">
+            <h1 class="carousel-title display-2 fw-bold mb-3">
+              <i class="bi bi-cpu-fill me-3"></i>ORBIT
+            </h1>
+            <h2 class="carousel-subtitle h3 fw-light mb-4">
+              Hecho para ser confiable, pensado para conectar.
+            </h2>
+            <p class="carousel-text lead mb-5">
+              Desarrollamos soluciones de software modernas y estructuradas,<br>
+              integrando innovación, automatización y buenas prácticas de desarrollo.
+            </p>
+            <div class="carousel-buttons d-flex gap-3 flex-wrap justify-content-center">
+              <a routerLink="/vistaPrincipal/informacion" class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="bi bi-info-circle me-2"></i>Conócenos
+              </a>
+              <a routerLink="/contacto" class="btn btn-primary btn-lg px-4 py-3">
+                <i class="bi bi-envelope me-2"></i>Contáctanos
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-image" style="background-image: url('assets/img/carrusel2.jpg');"></div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+          <div class="carousel-content-wrapper">
+            <h1 class="carousel-title display-2 fw-bold mb-3">
+              <i class="bi bi-lightning-charge-fill me-3"></i>Innovación Tecnológica
+            </h1>
+            <h2 class="carousel-subtitle h3 fw-light mb-4">
+              Tecnología de vanguardia para tu negocio
+            </h2>
+            <p class="carousel-text lead mb-5">
+              Utilizamos las últimas tecnologías y metodologías<br>
+              para crear software robusto y escalable que impulse tu empresa hacia el futuro.
+            </p>
+            <div class="carousel-buttons d-flex gap-3 flex-wrap justify-content-center">
+              <a routerLink="/vistaPrincipal/informacion" class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="bi bi-info-circle me-2"></i>Conócenos
+              </a>
+              <a routerLink="/contacto" class="btn btn-primary btn-lg px-4 py-3">
+                <i class="bi bi-envelope me-2"></i>Contáctanos
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-image" style="background-image: url('assets/img/carrusel3.jpg');"></div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+          <div class="carousel-content-wrapper">
+            <h1 class="carousel-title display-2 fw-bold mb-3">
+              <i class="bi bi-robot me-3"></i>Soluciones Inteligentes
+            </h1>
+            <h2 class="carousel-subtitle h3 fw-light mb-4">
+              Automatización e Inteligencia Artificial
+            </h2>
+            <p class="carousel-text lead mb-5">
+              Integramos IA y automatización para optimizar procesos<br>
+              y mejorar la experiencia de tus usuarios.
+            </p>
+            <div class="carousel-buttons d-flex gap-3 flex-wrap justify-content-center">
+              <a routerLink="/vistaPrincipal/informacion" class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="bi bi-info-circle me-2"></i>Conócenos
+              </a>
+              <a routerLink="/contacto" class="btn btn-primary btn-lg px-4 py-3">
+                <i class="bi bi-envelope me-2"></i>Contáctanos
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles de navegación -->
+    <button 
+      class="carousel-control-prev" 
+      type="button" 
+      data-bs-target="#heroCarousel" 
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button 
+      class="carousel-control-next" 
+      type="button" 
+      data-bs-target="#heroCarousel" 
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>
