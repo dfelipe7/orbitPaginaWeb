@@ -5,7 +5,7 @@ import { FormContactoComponent } from './vistaPrincipal/contacto/form-contacto.c
 export const routes: Routes = [
     {path: '', redirectTo: '/vistaPrincipal/inicio', pathMatch: 'full'},
     {path: 'vistaPrincipal/inicio', component:InicioComponent},
-    {path: 'vistaPrincipal/informacion', component:InformacionEmpresaComponent},
-    {path: 'contacto', component:FormContactoComponent}
+    {path: 'vistaPrincipal/nosotros', component:InformacionEmpresaComponent},
+    {path: 'vistaPrincipal/contacto', component:FormContactoComponent}
 
 ];

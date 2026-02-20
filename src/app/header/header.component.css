@@ -2,7 +2,7 @@
 .orbit-navbar {
     background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    padding: 0.8rem 0;
+    padding: 0.4rem 0;
     z-index: 1000;
   }
   
@@ -20,15 +20,16 @@
   }
   
   .navbar-logo {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
+    padding: 4px;
     object-fit: contain;
     border-radius: 50%;
     transition: all 0.3s ease;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
     display: block;
     border: 2px solid rgba(13, 202, 240, 0.3);
-    padding: 6px;
+    /*padding: 6px;*/
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
   }
@@ -82,6 +83,12 @@
     font-weight: 600;
   }
   
+  .orbit-slogan {
+    font-size: 0.75rem;
+    color: #0dcaf0;
+    letter-spacing: 0.5px;
+    margin-top: -2px;
+  }
   /* Responsive fix */
   @media (max-width: 991px) {
     .navbar-nav .nav-link {
